@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+.benefits-container{
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+    background: #FFFFFF;
+    flex-wrap: wrap;
+}
+.benefit-wrapper{
+    text-align: center;
+    padding-bottom: 14px;
+    flex-basis: 400px;
+}
+.benefit-wrapper h2{
+    font-family: Roboto-Regular;
+    font-size: 1.375rem;
+    color: #303C47;
+    line-height: 24px;
+}
+.benefit-wrapper span{
+    font-family: Roboto-Regular;
+    font-size: 1rem;
+    color: #303C47;
+    line-height: 23px;
+}
+@media screen and (max-width: 1324px) {
+    .benefit-wrapper {
+        flex-basis: 33%;
+
+    }
+}
+@media screen and (max-width: 414px) {
+    .benefit-wrapper {
+        flex-basis: 72%;
+
+    }
+}

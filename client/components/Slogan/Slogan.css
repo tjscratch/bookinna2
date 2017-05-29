@@ -1,0 +1,36 @@
+.slogan-container{
+    display: flex;
+    flex-direction: column;
+        margin-top: -160px;
+}
+.dp-slogan{
+    font-family: Roboto-Bold;
+    font-size: 2.25rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 40px;
+    text-shadow: 0 1px 1px #778695;
+    text-align: center;
+}
+.dp-slogan-small{
+    font-family: Roboto-Medium;
+    text-shadow: 0 1px 1px #778695;
+    font-size: 1.375rem;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding: 11px 0px 40px 0px;
+    text-align: center;
+}
+
+@media all and (max-width: 414px) {
+    .slogan-container {
+       margin-top: 0;
+    }
+      .dp-slogan {
+    font-size: 1.3rem;
+    }
+    .dp-slogan-small{
+        font-size: 1rem;
+    }
+}
