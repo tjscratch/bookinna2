@@ -1,16 +1,17 @@
-import path from 'path';
-import webpack from 'webpack';
+let path = require("path");
+let webpack = require('webpack');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 const ETP = require('extract-text-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-export default {
-    // devtools: 'eval-source-map',
+module.exports = {
+    devtool: 'cheap-module-source-map',
     entry: [
-        'webpack-hot-middleware/client',
+        'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
         path.join(__dirname, '/client/index.js'),
         ],
     output: {
-        path: '/',
+        path: path.join(__dirname, 'dist'),
         publicPath: '/',
         filename: 'bundle.js'
     },
@@ -21,6 +22,11 @@ export default {
             allChunks: true,
         }),
         new OpenBrowserPlugin({ url: 'http://localhost:3000/' }),
+        new HtmlWebpackPlugin({
+            template: 'client/index.html',
+            inject: 'body',
+            filename: 'index.html'
+        }),
     ],
     module: {
         loaders: [
@@ -41,5 +47,13 @@ export default {
                 }]
             },
         ]
+    },
+    devServer: {
+        inline: true,
+        port: 3000
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json'],
+        modules: ['src', 'node_modules'],
     },
 }
