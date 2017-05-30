@@ -70,7 +70,7 @@
     margin-right: 12px;
     width: 24px;
 	object-fit: contain;
-    background: url(/app/images/checkbox-off.svg) no-repeat 90% 45% #ffffff;
+    background: url(../images/checkbox-off.svg) no-repeat 90% 45% #ffffff;
 }
 .remember-me>label{
     font-family: Roboto-Regular;
@@ -123,7 +123,7 @@
     padding-right: 5px;
 }
 .icon-close{
-    background: url(/app/images/icon-close.svg) no-repeat 90% 45% #ffffff;
+    background: url(../images/icon-close.svg) no-repeat 90% 45% #ffffff;
     width: 16px;
 	height: 16px;
 	object-fit: contain;
