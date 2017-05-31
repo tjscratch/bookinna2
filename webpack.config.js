@@ -1,13 +1,12 @@
-let path = require("path");
-let webpack = require('webpack');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require("path");
+var webpack = require('webpack');
 const ETP = require('extract-text-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-    devtool: 'cheap-module-source-map',
+    // devtools: 'eval-source-map',
     entry: [
-        'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
+        'webpack-hot-middleware/client',
         path.join(__dirname, '/client/index.js'),
         ],
     output: {
@@ -22,11 +21,6 @@ module.exports = {
             allChunks: true,
         }),
         new OpenBrowserPlugin({ url: 'http://localhost:3000/' }),
-        new HtmlWebpackPlugin({
-            template: 'client/index.html',
-            inject: 'body',
-            filename: 'index.html'
-        }),
     ],
     module: {
         loaders: [
@@ -51,9 +45,5 @@ module.exports = {
     devServer: {
         inline: true,
         port: 3000
-    },
-    resolve: {
-        extensions: ['.js', '.jsx', '.json'],
-        modules: ['src', 'node_modules'],
     },
 }
