@@ -1,10 +1,11 @@
-var path = require("path");
-var webpack = require('webpack');
+let path = require("path");
+let webpack = require('webpack');
 const ETP = require('extract-text-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    // devtools: 'eval-source-map',
+    devtool: 'eval-source-map',
     entry: [
         'webpack-hot-middleware/client',
         path.join(__dirname, '/client/index.js'),
@@ -21,6 +22,9 @@ module.exports = {
             allChunks: true,
         }),
         new OpenBrowserPlugin({ url: 'http://localhost:3000/' }),
+        new CopyWebpackPlugin([
+            { from: 'client/index.html'},
+        ]),
     ],
     module: {
         loaders: [
