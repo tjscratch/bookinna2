@@ -27,7 +27,7 @@ export class Header extends React.Component {
                             <span className="b2b-login" onClick={openRegistration}>Вход</span>
                         </a>*/}
                         {/*<i className="icon-menu"></i>*/}
-                        <div id="burger-container">
+                        <div id="burger-container" onClick={openBurgerMenu}>
                             <div id="burger">
                                 <span>&nbsp;</span>
                                 <span>&nbsp;</span>
@@ -41,11 +41,15 @@ export class Header extends React.Component {
     }
 };
 
-$(document).ready(function(){
-    $("#burger-container").on('click', function(){
-        $(this).toggleClass("open");
-    });
-});
+let openBurgerMenu = () =>{
+    $("#burger-container").toggleClass("open");
+};
+// $(document).ready(function(){
+//     $("#burger-container").on('click', function(){
+//         console.log('хуй');
+//         $(this).toggleClass("open");
+//     });
+// });
 let openRegistration = () => {
     $('.black-wrapper').css("display", "block");
     $('.login-form-container').slideToggle(300).css("display", "block");
