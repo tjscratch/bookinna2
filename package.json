@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run server",
+    "start": "node server/server",
     "server": "nodemon --watch server --exec babel-node -- server/server.js",
     "build": "webpack -p && webpack-dev-server --content-base client/"
   },
