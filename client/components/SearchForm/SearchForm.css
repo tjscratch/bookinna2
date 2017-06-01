@@ -95,6 +95,20 @@
         }
 
     }
+    @media screen and (max-width: 710px) {
+        .icon-calendar {
+            flex-basis: 49% !important;
+        }
+
+        .icon-calendar:nth-child(even) {
+            margin-right: 2px;
+            margin-left: 0px;
+        }
+        /*.search-submit{
+          flex-basis: 49%;
+          margin: 2px 2px 0 0px;
+        }*/
+    }
 @media screen and (max-width: 414px) {
     .input_text {
         flex-basis: 99%;
