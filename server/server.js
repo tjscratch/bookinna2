@@ -1,10 +1,10 @@
-import express from 'express'
-import path from 'path';
+let express = require('express');
+let path = require('path');
 
-import webpack from 'webpack';
-import webpackMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from '../webpack.config';
+let webpack = require ('webpack');
+let webpackMiddleware = require ('webpack-dev-middleware');
+let webpackHotMiddleware = require ('webpack-hot-middleware');
+let webpackConfig = require ('../webpack.config');
 
 let app = express();
 
@@ -23,4 +23,3 @@ app.get('/*', (req, res) => {
 });
 
 app.listen(3000, () => console.log('Running on localhost:3000'));
-
