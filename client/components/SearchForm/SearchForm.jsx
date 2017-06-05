@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchForm.css';
 
-import { getLocation} from './GetLocation'
+import { getLocation} from './GetLocation.jsx'
 
 
 export class SearchForm extends React.Component {

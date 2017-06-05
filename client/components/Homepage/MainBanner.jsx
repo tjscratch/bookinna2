@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Slogan } from '../Slogan/Slogan'
-import { NavBar } from '../Navbar/NavBar'
-import { SearchForm } from '../SearchForm/SearchForm'
-import { Benefits } from '../Benefits/Benefits'
-import { B2Blogin } from '../Registration/B2Blogin'
+import { Slogan } from '../Slogan/Slogan.jsx'
+import { NavBar } from '../Navbar/NavBar.jsx'
+import { SearchForm } from '../SearchForm/SearchForm.jsx'
+import { Benefits } from '../Benefits/Benefits.jsx'
+import { B2Blogin } from '../Registration/B2Blogin.jsx'
 
 
-import { getBanner } from './GetBanner'
+import { getBanner } from './GetBanner.jsx'
 
 export class MainBanner extends React.Component{
     constructor () {

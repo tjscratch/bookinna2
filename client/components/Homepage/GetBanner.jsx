@@ -1,6 +1,6 @@
 import axios from 'axios'
-import ApiUrls from '../constants/ApiUrls'
-import { getHostName } from '../constants/LocationHost'
+import ApiUrls from '../constants/ApiUrls.jsx'
+import { getHostName } from '../constants/LocationHost.jsx'
 
 let getBanner = function() {
     let BannerUrl;

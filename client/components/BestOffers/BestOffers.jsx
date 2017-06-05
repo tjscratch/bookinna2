@@ -2,11 +2,11 @@ import React from 'react';
 // import { Link } from 'react-router'
 
 import './BestOffers.css';
-import Layouts from './Layouts'
+import Layouts from './Layouts.jsx'
 
 import '../fonts/font-awesome/css/font-awesome.css';
 
-import { getBanner } from '../Homepage/GetBanner'
+import { getBanner } from '../Homepage/GetBanner.jsx'
 
 
 export class BestOffers extends React.Component {

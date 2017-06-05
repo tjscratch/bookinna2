@@ -2,7 +2,7 @@ import React from 'react';
 
 import $ from 'jquery'
 
-import { getSpo } from './GetSpo'
+import { getSpo } from './GetSpo.jsx'
 
 export class SpoCategory extends React.Component {
     constructor (props) {
@@ -24,7 +24,7 @@ export class SpoCategory extends React.Component {
                $(".spo-offers.active").removeClass("active");
                  element.target.className = "spo-offers active"
                }
-                $('.filters-wrapper').slideToggle(600).css("display", "flex");   
+                $('.filters-wrapper').slideToggle(600).css("display", "flex");
             };
             return(
                     <li className={props.id == 1 ? 'spo-offers active': 'spo-offers'} onClick={showFilters}>{props.offerText}</li>

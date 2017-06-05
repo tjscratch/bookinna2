@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-import { B2Blogin } from '../Registration/B2Blogin'
+import { B2Blogin } from '../Registration/B2Blogin.jsx'
 import './Header.css';
 
 let hostName = location.host;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getPeriods } from './getPeriods'
+import { getPeriods } from './getPeriods.jsx'
 import './SPO.css';
 
 import $ from 'jquery'
