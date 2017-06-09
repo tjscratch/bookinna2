@@ -7,7 +7,7 @@
     "start": "node server/server",
     "server": "nodemon --watch server --exec babel-node -- server/server.js",
     "build": "webpack -p && webpack-dev-server --content-base client/",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "prod": "webpack -p"
   },
   "keywords": [],
   "author": "",
