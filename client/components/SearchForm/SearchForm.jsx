@@ -90,11 +90,7 @@ export class SearchForm extends React.Component {
                        readOnly
                 />
                 {/*<input type="text" autoComplete="off" className="input_text" placeholder="Эконом" value=""/>*/}
-                <input type="submit"
-                value="Найти"
-                className="search-submit"
-                readOnly
-                />
+                <button type="submit" className="search-submit">Найти</button>
             </form>
         )
     }

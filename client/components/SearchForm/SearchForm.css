@@ -32,12 +32,17 @@
 }
 .icon-calendar {
     background: url(../images/icon-calendar.svg) no-repeat 90% 40% #ffffff;
-    flex: 1 0 15%;
+    flex: 1 0 10%;
     cursor: pointer;
+}
+@-moz-document url-prefix() {
+    .search-form {
+       max-width: 1300px;
+    }
 }
 .passengers-flightclass{
     background: url(../images/icon-arrow.svg) no-repeat 92% center #ffffff;
-    flex: 1 0 14%;
+    flex: 1 0 15%;
     cursor: pointer;
 }
 .search-submit{
@@ -54,7 +59,7 @@
     text-transform: uppercase;
     height: 48px;
     margin-top: 2px;
-    flex: 1 0 5%;
+    flex: 1 0 10%;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 2px;
 }
