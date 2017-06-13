@@ -1,6 +1,6 @@
 import React from 'react';
 
-// var Promise = require('es6-promise').polyfill();
+let Promise = require('es6-promise').polyfill();
 import { Header } from '../Header/Header.jsx'
 import { MainBanner } from './MainBanner.jsx'
 import { SPO } from '../SPO/SPO.jsx'

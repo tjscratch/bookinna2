@@ -32,8 +32,7 @@
 }
 .icon-calendar {
     background: url(../images/icon-calendar.svg) no-repeat 90% 40% #ffffff;
-    flex: 1 0 10%;
-    /*min-width: 225px;*/
+    flex: 1 0 15%;
     cursor: pointer;
 }
 .passengers-flightclass{
