@@ -32,8 +32,8 @@ getLayout(props, key) {
                        }
                        else {
                            return (
-                                <a key={key} href={`${props[item].Url}`} target="_blank" className={props[item].TypeName == "M" ? "best-offers middle" : "best-offers large"} >
-                                    <li className={props[item].TypeName == "M" ? "offer-list offer-middle" : "offer-list offer-large"} style = {{background:  `url(${props[item].Image}) center/cover no-repeat`}}>
+                                <a key={key} href={`${props[item].Url}`} target="_blank" className={props[item].TypeName === "M" ? "best-offers middle" : "best-offers large"} >
+                                    <li className={props[item].TypeName === "M" ? "offer-list offer-middle" : "offer-list offer-large"} style = {{background:  `url(${props[item].Image}) center/cover no-repeat`}}>
                                         <div className="offer-data-container">
                                             <span className="offer-big">{props[item].FrontTitleRow1}</span>
                                             <span className="offer-big">{props[item].FrontTitleRow2}</span>
