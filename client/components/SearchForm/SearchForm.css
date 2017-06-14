@@ -70,14 +70,28 @@
     flex-direction: column;
     justify-content: center;
 }
-
+@media screen and (max-width: 1200px) {
+  .search-submit {
+      border-radius: 0 !important;
+      flex-basis: 99%;
+      margin: 2px 2px 0 2px;
+      }
+  .input_text:first-child{
+      margin-left: 2px;
+      }
+  }
+  .input_text {
+      border-radius: 0 !important;
+  }
 @media screen and (max-width: 1024px) {
     .input_text {
         flex-basis: 49%;
-        border-radius: 0 !important;
+    }
+    .input_text:nth-child(odd){
+    margin-left: 2px;
     }
     .icon-calendar {
-        flex-basis: 24.1% !important;
+        flex-basis: 24.1%;
         width: 100%;
     }
     .icon-calendar:nth-child(even) {
@@ -86,24 +100,15 @@
     /*.passengers-flightclass {*/
         /*margin-left: 0 !important;*/
     /*}*/
-    .search-submit {
-        border-radius: 0 !important;
-        flex-basis: 99%
-
-        }
-        .input_text:nth-child(odd){
-        margin-left: 2px;
-        }
-        .search-submit{
+        /*.search-submit{
             margin: 2px 2px 0 2px;
-        }
+        }*/
 
     }
     @media screen and (max-width: 710px) {
         .icon-calendar {
-            flex-basis: 49% !important;
+            flex-basis: 49%;
         }
-
         .icon-calendar:nth-child(even) {
             margin-right: 2px;
             margin-left: 0px;
@@ -119,29 +124,23 @@
         border-radius: 0 !important;
         margin: 2px 2px 0 2px;
     }
+    .icon-calendar {
+        flex-basis: 24.1%;
+        width: 100%;
+    }
     .icon-calendar:nth-child(even) {
         margin-right: 2px;
         margin-left: 0px;
     }
 }
-@media screen and (max-width: 320px) {
-    .icon-calendar:nth-child(odd) {
-        margin-right: 2px;
+@media screen and (max-width: 350px) {
+  .input_text{
+    flex-basis: 98%;
+  }
+  .icon-calendar:nth-child(even) {
+      margin-left: 2px;
+  }
+  .search-submit {
+      flex-basis: 98%;
     }
 }
-
-
-/*@media screen and (max-width: 630px) {*/
-        /*.search-form{*/
-            /*width: 99%;*/
-        /*}*/
-         /*.icon-calendar {*/
-            /*background: url(/app/images/icon-calendar.svg) no-repeat 94% 45% #ffffff;*/
-        /*}*/
-/*}*/
-/*@media screen and (max-width: 490px) {*/
-     /*.input_text {*/
-        /*flex-basis: 100%;*/
-        /*margin-right: 0;*/
-    /*}*/
-/*}*/

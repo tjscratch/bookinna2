@@ -68,7 +68,7 @@
     /*width: 100px;*/
 /*}*/
 #burger-container{
-    margin-top: 3px;
+    margin-top: 4px;
 }
 #burger{
     cursor: pointer;
@@ -76,13 +76,12 @@
 }
 
 #burger span{
-    background: #eee;
+    background: #EFF2F5;
     display: block;
     width: 24px;
     height: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     position: relative;
-    top: 0;
     transition: all ease-in-out 0.4s;
 }
 
@@ -92,12 +91,14 @@
     opacity: 0;
 }
 #burger-container.open span:nth-child(1){
-    transform: rotate(-45deg);
-    top: 7px;
+  transform: translate3d(0,6px,0) rotate(45deg);
+    /*transform: rotate(-45deg);*/
+    /*top: 7px;*/
 }
 #burger-container.open span:nth-child(3){
-    transform: rotate(45deg);
-    top: -7px;
+    transform: translate3d(0,-6px,0) rotate(-45deg);
+    /*transform: rotate(45deg);*/
+    /*top: -7px;*/
 }
 
 .b2b-login{
