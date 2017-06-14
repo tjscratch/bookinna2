@@ -76,12 +76,12 @@
       flex-basis: 99%;
       margin: 2px 2px 0 2px;
       }
+    .input_text {
+          border-radius: 0 !important;
+      }
   .input_text:first-child{
       margin-left: 2px;
       }
-  }
-  .input_text {
-      border-radius: 0 !important;
   }
 @media screen and (max-width: 1024px) {
     .input_text {
