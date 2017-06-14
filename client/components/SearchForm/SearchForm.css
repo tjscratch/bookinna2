@@ -37,7 +37,7 @@
 }
 @-moz-document url-prefix() {
     .search-form {
-       max-width: 1300px;
+       max-width: 1250px;
     }
 }
 .passengers-flightclass{
