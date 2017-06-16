@@ -4,7 +4,6 @@
 }
 .navbar{
     position: relative;
-    cursor: pointer;
     margin-bottom: 40px;
 }
 .navbar-menu{
@@ -24,6 +23,7 @@
     margin-top: 2px;
     line-height: 40px;
     flex: 1;
+    cursor: pointer;
 }
 .navbar-menu li:first-child{
     border-radius: 4px 0 0 4px;
