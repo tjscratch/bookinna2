@@ -9,5 +9,7 @@ let getSpo = function() {
     hostName === 'http://test.inna.ru' ? offerUrl = `${hostName}${ApiUrls.GetOffers}`: offerUrl = `https://inna.ru${ApiUrls.GetOffers}`;
     return axios.get(offerUrl);
 };
-
-export {getSpo}
+let getBestOffers = function (CategoryId) {
+  return axios.get(`https://inna.ru/api/v1/BestOffer/GetOffers?Category=${CategoryId}&Location=6733&Month=-1&Period=1`);
+}
+export { getSpo , getBestOffers}
