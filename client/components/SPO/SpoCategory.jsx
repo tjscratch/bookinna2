@@ -63,7 +63,8 @@ let showBannerWall = (element) => {
   $(".spo-offers.active").removeClass("active");
     element.target.className = "spo-offers active"
   }
+  $('.filters-wrapper').slideUp(600);
   $('.best-offers-container').css("display", "flex");
-}
+};
 
 export default SpoCategory;

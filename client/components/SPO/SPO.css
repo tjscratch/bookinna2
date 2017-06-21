@@ -149,7 +149,7 @@ option:hover{
 @media screen and (max-width: 1024px) {
     .spo-offers {
         margin: 4px 0;
-        flex-basis: 23%;
+        flex-basis: 24%;
     }
     select{
         flex-basis: 30%;
@@ -160,7 +160,7 @@ option:hover{
 }
 @media screen and (max-width: 414px) {
     .spo-offers {
-       flex-basis: inherit;
+       flex-basis: 50%;
     }
     .spo-filter-block{
        flex-direction: column;
