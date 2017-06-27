@@ -25,7 +25,7 @@ export class SpoCategory extends React.Component {
                $(".spo-offers.active").removeClass("active");
                  element.target.className = "spo-offers active"
                }
-                $('.best-offers-container').css("display", "none");
+                $('.best-offers-container').fadeOut(600);
                 $('.filters-wrapper').slideToggle(600).css("display", "flex");
                 let CategoryId = props.id;
                 getBestOffers(CategoryId).then(results => {
@@ -50,7 +50,7 @@ export class SpoCategory extends React.Component {
         }
         return (
             <ul className="spo-container">
-              <li className='spo-offers active' onClick={showBannerWall}>Горячие предложения</li>
+              <li className='spo-offers active' onClick={showBannerWall}>Горящие туры</li>
                 {this.state.offer.map(offer => {
                     return  <SpoCategory key={offer.Value} id={offer.Value} offerText={offer.Text} />
                 })}
