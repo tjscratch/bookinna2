@@ -17,7 +17,7 @@ export class MainBanner extends React.Component{
     componentDidMount() {
         getBanner().then(results => {
             this.setState({
-                // banner:  `url(${results.data.Slider[0].Image}) center/cover no-repeat`
+                //banner:  `url(${results.data.Slider[0].Image}) center/cover no-repeat`
                 banner:  `url(http://sexwall.ru/download_img.php?dimg=11217&raz=1920x1080) center/cover no-repeat`
 
             })

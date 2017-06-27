@@ -1,7 +1,7 @@
 .slogan-container{
     display: flex;
     flex-direction: column;
-        margin-top: -360px;
+        margin-top: -2%;
 }
 .dp-slogan{
     font-family: Roboto-Bold;
