@@ -49,4 +49,5 @@ export class B2Blogin extends React.Component {
 
 let closeRegistration = () => {
     $('.login-form-container').css("display", "none");
+    $('.black-wrapper').css("display", "none");
 };

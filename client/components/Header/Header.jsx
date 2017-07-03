@@ -44,12 +44,6 @@ export class Header extends React.Component {
 let openBurgerMenu = () =>{
     $("#burger-container").toggleClass("open");
 };
-// $(document).ready(function(){
-//     $("#burger-container").on('click', function(){
-//         console.log('хуй');
-//         $(this).toggleClass("open");
-//     });
-// });
 let openRegistration = () => {
     $('.black-wrapper').css("display", "block");
     $('.login-form-container').slideToggle(300).css("display", "block");
