@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-import SpecialOffers from './SpecialOffers.jsx'
+// import SpecialOffers from './SpecialOffers.jsx'
 import $ from 'jquery'
 
 import { getSpo, getBestOffers } from './GetSpo.jsx'
@@ -8,7 +8,7 @@ import { getSpo, getBestOffers } from './GetSpo.jsx'
 export class SpoCategory extends React.Component {
     constructor (props) {
         super(props);
-        this.state = {offer: []}
+        this.state = {offer: [], specialoffers: []}
     }
     componentDidMount() {
         getSpo().then(results => {
@@ -29,34 +29,40 @@ export class SpoCategory extends React.Component {
                 $('.filters-wrapper').slideToggle(600).css("display", "flex");
                 let CategoryId = props.id;
                 getBestOffers(CategoryId).then(results => {
-                  let specialOffers = [];
-                  specialOffers = results.data.Offers;
-                  return (
-                    <ul className="shit">
-                        {specialOffers.map(offerItem => {
-                          // console.log(offerItem);
-                            return  <SpecialOffers key={offerItem.DirectoryId} Country={offerItem.Country} Image={offerItem.ImageL} />
-
-                        })}
-                    </ul>
-                  )
-
+                    console.log(results.data.Offers)
+                        this.setState({
+                            specialoffers: results.data.Offers
+                    });
 
                 });
             };
               return(
-                      <li className='spo-offers' onClick={showFilters}>{props.offerText}</li>
+                      <li className='spo-offers' onClick={showFilters.bind(this)}>{props.offerText}</li>
                     )
-        }
+        };
+        const SpecialOffers = (props) => {
+            return(
+                <li className="offer-list" style={{background: `url(${props.offerImage}) center/cover no-repeat`}}>
+                </li>
+            )
+        };
         return (
-            <ul className="spo-container">
-              <li className='spo-offers active' onClick={showBannerWall}>Горящие туры</li>
-                {this.state.offer.map(offer => {
-                    return  <SpoCategory key={offer.Value} id={offer.Value} offerText={offer.Text} />
-                })}
-            </ul>
+              <div className="banner-wall">
+                  <ul className="spo-container">
+                      <li className='spo-offers active' onClick={showBannerWall}>Горящие туры</li>
+                      {this.state.offer.map(offer => {
+                          return  <SpoCategory key={offer.Value} id={offer.Value} offerText={offer.Text} />
+                      })}
+                  </ul>
+                  <ul className="">
+                      {this.state.specialoffers.map((offer, index) => {
+                          return  <SpecialOffers key={index} offerImage={offer.ImageL} />
+                      })}
+                  </ul>
+              </div>
         )
     }
+
 }
 let showBannerWall = (element) => {
   if (element.target.className === "spo-offers") {
